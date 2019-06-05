@@ -1,0 +1,11 @@
+[package]
+name = "oxi"
+version = "0.1.0"
+authors = ["Tomas Kukosa <tkeksa@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+bytes = "0.4"
+getopts = "0.2"
+hexplay = "0.2"
+lazy_static = "1"
