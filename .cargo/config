@@ -2,6 +2,6 @@
 target = "armv7-unknown-linux-musleabihf"
 
 [target.armv7-unknown-linux-musleabihf]
-linker = "arm-linux-gnueabihf-ld"
+linker = "arm-linux-gnueabihf-gcc"
 #set linker if not available in PATH
 #linker = "c:/progs/Linaro/gcc-linaro-7.4.1-2019.02-i686-mingw32_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc.exe"
