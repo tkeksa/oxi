@@ -8,16 +8,44 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
-    - uses: actions-rs/toolchain@v1
+
+    - name: Checkout
+      uses: actions/checkout@v1
+
+    - name: Install components
+      run: rustup component add --toolchain stable rustfmt clippy
+
+    - name: Install target
+      uses: actions-rs/toolchain@v1
       with:
         toolchain: stable
         target: armv7-unknown-linux-musleabihf
+
+    - name: Fetch
+      uses: actions-rs/cargo@v1
+      with:
+        command: fetch
+
+    - name: Check
+      uses: actions-rs/cargo@v1
+      with:
+        command: check
+
+    - name: Format
+      uses: actions-rs/cargo@v1
+      with:
+        command: fmt
+        arguments: --all -- --check
+
+    - name: Clippy
+      uses: actions-rs/cargo@v1
+      with:
+        command: clippy
+        arguments: -- -D warnings
+
     - name: Build
       uses: actions-rs/cargo@v1
       with:
         use-cross: true
         command: build
         args: --target armv7-unknown-linux-musleabihf
-    - name: Run tests
-      run: cargo test --verbose
