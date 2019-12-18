@@ -4,7 +4,7 @@ use std::fs::File;
 use std::io::{self, Read};
 use std::path::Path;
 
-use bytes::{Buf, IntoBuf};
+use bytes::Buf;
 use getopts::Options;
 use hexplay::{HexViewBuilder, CODEPAGE_ASCII};
 use lazy_static::lazy_static;
@@ -46,7 +46,7 @@ const MEM_LEN: usize = 256;
 const HEADER: u32 = 0x4F4C_AA55;
 
 fn parse_buf(buf: &[u8]) {
-    let mut buf = buf.as_ref().into_buf();
+    let mut buf = &buf[..];
 
     let hdr = buf.get_u32_le();
     println!(
