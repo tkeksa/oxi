@@ -4,10 +4,14 @@
 [![dependency status][deps-image]][deps-link]
 [![MIT licensed][license-image]][license-link]
 
-OLinuXino EEPROM board info
+[OLinuXino][OLINUXINO] EEPROM board info
 
 ## Resources
 - [OLinuXino EEPROM Content][OLIMEX-A20-EEPROM]
+- [OLinuXino U-Boot patch file with list of boards][OLINUXINO-UBOOT-PATCH]
+
+##### Generate list of board IDs from OLinuXino U-Boot patch file 
+`wget -qO- https://raw.githubusercontent.com/OLIMEX/u-boot-olinuxino/release-20200414/debian/patches/olinuxino_support.patch | perl extract_board_ids.pl > boards.rs`
 
 ## License
 - MIT license ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)
@@ -18,4 +22,6 @@ OLinuXino EEPROM board info
 [deps-link]: https://deps.rs/repo/github/tkeksa/oxi
 [license-image]: https://img.shields.io/badge/license-MIT-blue.svg
 [license-link]: http://opensource.org/licenses/MIT
-[OLIMEX-A20-EEPROM]: https://github.com/OLIMEX/OLINUXINO/raw/master/SOFTWARE/A20/A20-eeprom-contents/Olimex-A20-EEPROM-July-2018.pdf
+[OLINUXINO]: https://github.com/OLIMEX/OLINUXINO
+[OLIMEX-A20-EEPROM]: https://github.com/OLIMEX/OLINUXINO/blob/master/SOFTWARE/A20/A20-eeprom-contents/Olimex-A20-EEPROM-October-2019.pdf
+[OLINUXINO-UBOOT-PATCH]: https://github.com/OLIMEX/u-boot-olinuxino/blob/release-20200414/debian/patches/olinuxino_support.patch
