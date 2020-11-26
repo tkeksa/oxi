@@ -16,6 +16,7 @@ lazy_static! {
         m.insert(9215, "T2-OLinuXino-LIME-s16MB-IND");
         m.insert(9219, "T2-OLinuXino-LIME-e4G-IND");
         m.insert(9734, "T2-OLinuXino-LIME-e4Gs16M-IND");
+        m.insert(10481, "T2-OLinuXino-LIME-e8Gs16M-IND");
         m.insert(7701, "A20-OLinuXino-LIME2");
         m.insert(8340, "A20-OLinuXino-LIME2-e4GB");
         m.insert(9166, "A20-OLinuXino-LIME2-e16GB");
