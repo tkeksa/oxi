@@ -46,7 +46,7 @@ const MEM_LEN: usize = 256;
 const HEADER: u32 = 0x4F4C_AA55;
 
 fn parse_buf(buf: &[u8]) {
-    let mut buf = &buf[..];
+    let mut buf = buf;
 
     let hdr = buf.get_u32_le();
     println!(
