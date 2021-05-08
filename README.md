@@ -11,7 +11,7 @@
 - [OLinuXino U-Boot boards.c file with list of boards][OLINUXINO-UBOOT-BOARDS]
 
 ##### Generate list of board IDs from OLinuXino U-Boot boards.c file 
-`wget -qO- https://raw.githubusercontent.com/OLIMEX/u-boot-olinuxino/release-20210127/board/olimex/common/boards.c | perl extract_board_ids.pl > boards.rs`
+`wget -qO- https://raw.githubusercontent.com/OLIMEX/u-boot-olinuxino/release-20210317/board/olimex/common/boards.c | perl extract_board_ids.pl > boards.rs`
 
 ## License
 - MIT license ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)
@@ -24,4 +24,4 @@
 [license-link]: http://opensource.org/licenses/MIT
 [OLINUXINO]: https://github.com/OLIMEX/OLINUXINO
 [OLIMEX-A20-EEPROM]: https://github.com/OLIMEX/OLINUXINO/blob/master/SOFTWARE/A20/A20-eeprom-contents/Olimex-A20-EEPROM-October-2019.pdf
-[OLINUXINO-UBOOT-BOARDS]: https://github.com/OLIMEX/u-boot-olinuxino/blob/release-20210127/board/olimex/common/boards.c
+[OLINUXINO-UBOOT-BOARDS]: https://github.com/OLIMEX/u-boot-olinuxino/blob/release-20210317/board/olimex/common/boards.c
