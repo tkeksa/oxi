@@ -15,7 +15,7 @@ lazy_static! {
 HDR
 
 while (<>) {
-    next unless /OLINUXINO_BOARD_\w+\s*\(\s*(\d+)\s*,\s*"([^"]+)"/;
+    next unless /OLINUXINO_BOARD\w*\s*\(\s*(\d+)\s*,\s*"([^"]+)"/;
     print qq/        m.insert($1, "$2");\n/;
 }
 

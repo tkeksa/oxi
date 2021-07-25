@@ -59,6 +59,18 @@ lazy_static! {
         m.insert(10157, "T2-SOM204-1Gs16Me4G-C-I");
         m.insert(10234, "T2-SOM204-1Gs16Me8G-MC-I");
         m.insert(10238, "T2-SOM204-1G-I");
+        m.insert(8861, "A64-OLinuXino-2Ge8G-IND");
+        m.insert(9065, "A64-OLinuXino-1Gs16M");
+        m.insert(8367, "A64-OLinuXino-1Ge4GW");
+        m.insert(8857, "A64-OLinuXino-1G");
+        m.insert(9849, "A64-OLinuXino-1Ge16GW");
+        m.insert(10728, "A64-OLinuXino-1Ge16GW-EA");
+        m.insert(4432, "A13-OLinuXino");
+        m.insert(4787, "A13-SOM-256");
+        m.insert(4788, "A13-SOM-512");
+        m.insert(10663, "A10-OLinuXino-LIME-e16Gs16M");
+        m.insert(8950, "A10-OLinuXino-LIME-n8GB");
+        m.insert(4746, "A10-OLinuXino-LIME");
         m
     };
 }
