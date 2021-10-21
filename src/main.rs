@@ -13,7 +13,8 @@ fn usage(opts: &Options) {
     let brief = r#"OLinuXino EEPROM board info
 
 oxi [-h] [-x] [-i I2CBUS]"#;
-    print!("{}", opts.usage(&brief));
+
+    print!("{}", opts.usage(brief));
 }
 
 macro_rules! i2c_dev_fmt {
