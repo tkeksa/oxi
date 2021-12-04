@@ -71,6 +71,9 @@ lazy_static! {
         m.insert(10663, "A10-OLinuXino-LIME-e16Gs16M");
         m.insert(8950, "A10-OLinuXino-LIME-n8GB");
         m.insert(4746, "A10-OLinuXino-LIME");
+        m.insert(10469, "STMP157-OLinuXino-LIME2H-IND");
+        m.insert(10887, "STMP157-OLinuXino-LIME2H-EXT");
+        m.insert(10997, "STMP157-OLinuXino-LIME2-EXT");
         m
     };
 }
