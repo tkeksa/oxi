@@ -148,7 +148,7 @@ fn main() -> Result<(), io::Error> {
         // find EEPROM
         let devs = find_i2c_devs();
         let eeproms = find_eeproms(&devs);
-        if let Some(&i) = eeproms.get(0) {
+        if let Some(&i) = eeproms.first() {
             i
         } else {
             eprintln!("EEPROM not found");
