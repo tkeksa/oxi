@@ -118,17 +118,17 @@ fn parse_buf(buf: &[u8]) {
     println!("MAC     : {}", mac);
 }
 
-fn main() -> Result<(), std::io::Error> {
+fn main() -> Result<(), io::Error> {
     let args = env::args().skip(1).collect::<Vec<_>>();
 
     let mut opts = Options::new();
     opts.optopt("i", "i2c", "Number of the I2C bus", "I2CBUS");
     opts.optflag("x", "hex", "Hexadecimal dump");
     opts.optflag("h", "help", "Help");
-    let matches = match opts.parse(&args) {
+    let matches = match opts.parse(args) {
         Ok(m) => m,
         Err(f) => {
-            eprintln!("{}", f.to_string());
+            eprintln!("{}", f);
             usage(&opts);
             std::process::exit(1);
         }
@@ -148,7 +148,7 @@ fn main() -> Result<(), std::io::Error> {
         // find EEPROM
         let devs = find_i2c_devs();
         let eeproms = find_eeproms(&devs);
-        if let Some(&i) = eeproms.get(0) {
+        if let Some(&i) = eeproms.first() {
             i
         } else {
             eprintln!("EEPROM not found");
